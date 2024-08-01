@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
 
+import Sidebar from './components/common/Sidebar';
+import DataUsageCard from './components/Dashboard/DataUsage/DataUsageCard';
+import OverviewCard from './components/Dashboard/OverView/OverviewCard';
+import TopUsageCard from './components/Dashboard/TopUsage/TopUsageCard';
+import MainPage from './Pages/MainPage';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+          <Route path="/" element={<MainPage />}/>
+          <Route path="/overview" element={<OverviewCard />} />
+          <Route path="/datausage" element={<DataUsageCard />} />
+          <Route path="/topusage" element={<TopUsageCard />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

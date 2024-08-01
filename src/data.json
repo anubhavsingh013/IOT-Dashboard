@@ -1,0 +1,336 @@
+{
+    "newAlerts": [
+      {
+        "id": "ID123456",
+        "timestamp": "MM/DD/YYYY HH:MM AM",
+        "message": "Cras mattis consectetuer purus sit amet fermentum. Curabitur blandit tempus porttitor."
+      },
+      {
+        "id": "ID123457",
+        "timestamp": "MM/DD/YYYY HH:MM AM",
+        "message": "Cras mattis consectetuer purus sit amet fermentum. Curabitur blandit tempus porttitor."
+      },
+      {
+        "id": "ID123458",
+        "timestamp": "MM/DD/YYYY HH:MM AM",
+        "message": "Cras mattis consectetuer purus sit amet fermentum. Curabitur blandit tempus porttitor."
+      },
+      {
+        "id": "ID123459",
+        "timestamp": "MM/DD/YYYY HH:MM AM",
+        "message": "Cras mattis consectetuer purus sit amet fermentum. Curabitur blandit tempus porttitor."
+      }
+    ],
+
+      "alertLogs": [
+        {
+          "id": "ID123460",
+          "timestamp": "07/30/2024 08:15 AM",
+          "message": "Curabitur blandit tempus porttitor. Cras mattis consectetuer purus sit amet fermentum.",
+          "severity": "low"
+        },
+        {
+          "id": "ID123461",
+          "timestamp": "04/07/2024 09:45 AM",
+          "message": "Curabitur blandit tempus porttitor. Cras mattis consectetuer purus sit amet fermentum.",
+          "severity": "high"
+        },
+        {
+          "id": "ID123462",
+          "timestamp": "07/25/2024 02:30 PM",
+          "message": "Curabitur blandit tempus porttitor. Cras mattis consectetuer purus sit amet fermentum.",
+          "severity": "low"
+        },
+        {
+          "id": "ID123463",
+          "timestamp": "01/02/2024 07:00 AM",
+          "message": "Curabitur blandit tempus porttitor. Cras mattis consectetuer purus sit amet fermentum.",
+          "severity": "high"
+        }
+      ] ,
+
+    "datausage": [
+      { "name": "Su", "usage": 65.17, "date": "4/7" },
+      { "name": "Mo", "usage": 132.42, "date": "4/8" },
+      { "name": "Tu", "usage": 18.55, "date": "4/9" },
+      { "name": "We", "usage": 20.55, "date": "4/10" },
+      { "name": "Th", "usage": 48.22, "date": "4/11" },
+      { "name": "Fr", "usage": 122.22, "date": "4/12" },
+      { "name": "Sa", "usage": 107.57, "date": "4/13" }
+    ],
+
+    "pieChartData1": [
+      { "name": "Active", "value": 160, "color": "#402E7A" },
+      { "name": "Suspended", "value": 20, "color": "#F6288F" },
+      { "name": "Cancelled", "value": 20, "color": "#19A7CE" }
+    ],
+
+    "pieChartData2": [
+      { "name": "Connected", "value": 190, "color": "#402E7A" },
+      { "name": "Disconnected", "value": 10, "color": "#F6288F" }
+    ],
+    "usageData": [
+      { "msisdn": "12345678910", "status": "Active", "usage": "10GB" },
+      { "msisdn": "12345678910", "status": "Deactivated", "usage": "10GB" },
+      { "msisdn": "12345678910", "status": "Active", "usage": "10GB" },
+      { "msisdn": "12345678910", "status": "Active", "usage": "10GB" },
+      { "msisdn": "12345678910", "status": "Active", "usage": "10GB" },
+      { "msisdn": "12345678910", "status": "Active", "usage": "10GB" }
+    ],
+
+    "reportsData": [
+      {
+        "category": "Category",
+        "reportName": "Report name 1",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 2",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 3",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 4",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 5",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 6",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 7",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 8",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 9",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 10",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 11",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 12",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 13",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 14",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 15",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 16",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 17",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 18",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 19",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 20",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 21",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 22",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 23",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 24",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 25",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 26",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 27",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 28",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 29",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 30",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 31",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 32",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 33",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 34",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 35",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      },
+      {
+        "category": "Category",
+        "reportName": "Report name 36",
+        "source": "Control center",
+        "description": "Lorem ipsum dolor sit amet",
+        "lastUpdated": "MM/DD/YYYY HH:MM PM (PST)"
+      }
+    ]
+  }
+  
