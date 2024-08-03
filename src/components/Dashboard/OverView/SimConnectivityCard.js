@@ -29,21 +29,21 @@ const SIMConnectivityCard = () => {
           fill="black"
           textAnchor="middle"
           dominantBaseline="central"
-          fontSize={isMobile ? 12 : 20}
+          fontSize={isMobile ? 20 : 25}
           fontWeight="bold"
         >
           {`${connectedEntry.value}K`}
         </text>
         <text
-          x={cx}
+          x={cx+3}
           y={cy + 10}
           fill="black"
           textAnchor="middle"
           dominantBaseline="central"
-          fontSize={isMobile ? 10 : 16}
+          fontSize={ 15}
           color="gray"
         >
-          Connected Sims
+          Active SIMs
         </text>
       </>
     );

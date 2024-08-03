@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { List, ListItem, ListItemIcon, ListItemText, IconButton, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
+import { List, ListItem, ListItemIcon, ListItemText, IconButton, Accordion,useTheme,useMediaQuery, Drawer } from '@mui/material';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import DevicesIcon from '@mui/icons-material/Devices';
 import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt';
@@ -9,6 +9,8 @@ import ArrowDropDown from '@mui/icons-material/ArrowDropDown';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 
 const Sidebar = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [activeIndex, setActiveIndex] = useState(1); 
   const [expandedIndex, setExpandedIndex] = useState(null);
 
@@ -27,7 +29,7 @@ const Sidebar = () => {
     backgroundColor: '#fff',
     position: 'fixed',
     left: 0,
-    top: 65,
+    top: 64,
     boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
     margin: 0,
     padding: 0,
@@ -49,7 +51,8 @@ const Sidebar = () => {
   };
 
   return (
-    <div style={sidebarStyle}>
+    <>
+    {!isMobile?<div style={sidebarStyle} >
       <List sx={{ padding: 0, margin: 0 }}>
         <ListItem
           sx={{
@@ -63,7 +66,6 @@ const Sidebar = () => {
           </ListItemIcon>
           <ListItemText primary="Home" />
           <IconButton sx={{ position: 'absolute', right: 10, color: '#555' }}>
-            {/* {expandedIndex === 0 ? <ArrowDropUpIcon /> : <ArrowDropDown />} */}
           </IconButton>
         </ListItem>
         {expandedIndex === 0 && (
@@ -94,7 +96,6 @@ const Sidebar = () => {
           </ListItemIcon>
           <ListItemText primary="Internet of Things" />
           <IconButton sx={{ position: 'absolute', right: 10, color: '#555' }}>
-            {/* {expandedIndex === 1 ? <ArrowDropUpIcon /> : <ArrowDropDown />} */}
           </IconButton>
         </ListItem>
         {expandedIndex === 1 && (
@@ -124,7 +125,6 @@ const Sidebar = () => {
           </ListItemIcon>
           <ListItemText primary="Advanced Network" />
           <IconButton sx={{ position: 'absolute', right: 6, color: '#555' }}>
-            {/* {expandedIndex === 2 ? <ArrowDropUpIcon /> : <ArrowDropDown />} */}
           </IconButton>
         </ListItem>
         {expandedIndex === 2 && (
@@ -153,7 +153,6 @@ const Sidebar = () => {
           </ListItemIcon>
           <ListItemText primary="Security" />
           <IconButton sx={{ position: 'absolute', right: 10, color: '#555' }}>
-            {/* {expandedIndex === 3 ? <ArrowDropUpIcon /> : <ArrowDropDown />} */}
           </IconButton>
         </ListItem>
         {expandedIndex === 3 && (
@@ -188,7 +187,8 @@ const Sidebar = () => {
           </IconButton>
         </ListItem>
       </List>
-    </div>
+    </div>:<div/>}
+    </>
   );
 };
 

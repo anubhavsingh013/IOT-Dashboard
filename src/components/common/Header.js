@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
+import { AppBar, Toolbar, Typography, Button, Box,useMediaQuery,useTheme } from "@mui/material";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import AlertsDrawer from "./AlertsDrawer";
 import Data from '../../data.json';
 
 const Header = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const [drawerOpen, setDrawerOpen] = useState(false);
   const newAlertsCount = Data.newAlerts?.length; 
 
@@ -39,14 +41,13 @@ const Header = () => {
     fontSize: '10px',
     fontWeight: 'bold',
   };
-
   return (
     <AppBar position="static" sx={headerStyle}>
       <Toolbar
         sx={{
           display: "flex",
           flexDirection: "column",
-          alignItems: "flex-start",
+          alignItems: isMobile?"center":'flex-start',
           width: "100%",
         }}
       >
@@ -59,6 +60,7 @@ const Header = () => {
             justifyContent: "space-between",
             alignItems: "center",
             width: "100%",
+            flexDirection:isMobile?'column':'row'
           }}
         >
           <Typography
@@ -73,7 +75,7 @@ const Header = () => {
           >
             Internet of Things Dashboard
           </Typography>
-          <div style={{ display: "flex", alignItems: "center", position: 'relative' }}>
+          <Box style={{ display: "flex", alignItems: "center", position: 'relative' }}>
             <Typography
               variant="body1"
               sx={{ fontWeight: "bold", color: "#000", marginRight: "15px" }}
@@ -88,25 +90,27 @@ const Header = () => {
                 textTransform: "none",
                 display: "flex",
                 alignItems: "center",
-                position: 'relative',
+                // position: 'relative',
               }}
               onClick={toggleDrawer(true)}
             >
-              <NotificationsIcon sx={{ color: "black" }} />
-              {newAlertsCount > 0 && (
-                <Box sx={badgeStyle}>
-                  {newAlertsCount}
-                </Box>
-              )}
-              
-              <Typography
-                variant="h7"
-                sx={{ fontWeight: "bold", color: "black", marginLeft: "8px" }}
-              >
-                Alerts
-              </Typography>
+              <Box sx={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
+                <NotificationsIcon sx={{ color: "black" }} />
+                {newAlertsCount > 0 && (
+                  <Box sx={badgeStyle}>
+                    {newAlertsCount}
+                  </Box>
+                )}
+                
+                <Typography
+                  variant="h7"
+                  sx={{ fontWeight: "bold", color: "black", marginLeft: "8px" }}
+                >
+                  Alerts
+                </Typography>
+              </Box>
             </Button>
-          </div>
+          </Box>
         </Box>
       </Toolbar>
       <AlertsDrawer drawerOpen={drawerOpen} toggleDrawer={toggleDrawer} />

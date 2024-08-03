@@ -32,9 +32,9 @@ const TopUsageCard = () => {
                   <TableCell>{item.msisdn}</TableCell>
                   <TableCell>
                     {item.status === 'Active' ? (
-                      <CheckCircle style={{ color: 'green', verticalAlign: 'middle' }} />
+                      <CheckCircle style={{ color: 'green', verticalAlign: 'middle',width:'20px',height:'20px' }} />
                     ) : (
-                      <Cancel style={{ color: 'red', verticalAlign: 'middle' }} />
+                      <Cancel style={{ color: 'red', verticalAlign: 'middle',width:'20px',height:'20px'  }} />
                     )}
                     {` ${item.status}`}
                   </TableCell>

@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Card, CardContent, Typography, Grid, Box, Link, Select, MenuItem, FormControl, InputLabel } from '@mui/material';
+import { Card, CardContent, Typography, Grid, Box, Link, Select, MenuItem, FormControl, InputLabel,} from '@mui/material';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LabelList } from 'recharts';
 import Data from '../../../iotdata.json';
@@ -9,8 +9,13 @@ const transformData = (dataUsage) => {
     date: new Date(entry.date),
     usage: entry.dataUsage,
     day: new Date(entry.date).toLocaleDateString('en-US', { 
-      // day: 'numeric', month: 'short'
+      day:'numeric',
+      month:'numeric',
       weekday:'short'
+     }),
+     daylabel:new Date(entry.date).toLocaleDateString('en-us',{
+      day:'numeric',
+      month:'numeric'
      })
   }));
 };
@@ -43,10 +48,12 @@ const filterDataByTimeRange = (data, range) => {
 };
 
 const DataUsageCard = () => {
+
+  
+
   const [timeRange, setTimeRange] = useState('7 days');
   const dataUsage = Data.dataUsageDefaultData.dataUsageGraphResponse[0].dataUsage;
   const data = useMemo(() => transformData(dataUsage), [dataUsage]);
-
   const filteredData = useMemo(() => {
     const timeFilteredData = filterDataByTimeRange(data, timeRange);
     return timeRange === '7 days' ? timeFilteredData : aggregateDataByMonth(timeFilteredData);
@@ -66,22 +73,30 @@ const DataUsageCard = () => {
 
   const CustomTick = ({ x, y, payload }) => {
     const formattedValue = timeRange === '7 days' ? payload.value : payload.value;
+    const finaldata=payload.value.split(',');
     return (
       <g transform={`translate(${x},${y})`}>
-        <text x={0} y={0} dy={16} textAnchor="middle" fill="#666">
+        {timeRange!=='7 days' && <text x={0} y={0} dy={16} textAnchor="middle" fill="#666">
           {formattedValue}
-        </text>
+        </text>}
+        {timeRange === '7 days' && (
+          <><text x={0} y={0} dy={16} textAnchor="middle" fill="#666">
+            {finaldata[0]}
+          </text>
+          <text x={0} y={16} dy={11} textAnchor="middle" fill="#666" fontSize={'small'}>
+              {finaldata[1]}
+            </text></>
+        
+      )}
       </g>
     );
   };
 
-  // const totalUsage = filteredData.reduce((acc, day) => acc + day.usage, 0).toFixed(2);
-  // const dailyAverage = (totalUsage / filteredData.length).toFixed(2);
   const totalUsage=Data.dataUsageDefaultData.dataUsageGraphResponse[0].totalDataUsage;
   const dailyAverage=Data.dataUsageDefaultData.dataUsageGraphResponse[0].dataAverage;
 
   return (
-    <Card sx={{ boxShadow: 2, borderRadius: 2, overflow: 'hidden', height: '100%' }}>
+    <Card sx={{ boxShadow: 2, borderRadius: 2, overflow: 'hidden', height: '100%', }}>
       <CardContent>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
           <Typography variant="h5" sx={{ fontWeight: 'bold', color: '#333' }}>
@@ -161,7 +176,7 @@ const DataUsageCard = () => {
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={filteredData} margin={{ top: 20, right: 5, left: 1, bottom: 5 }} barSize={25}>
                   <CartesianGrid strokeDasharray="4 4" horizontal={true} vertical={false} />
-                  <XAxis dataKey={timeRange === '7 days' ? 'day' : 'name'} tick={<CustomTick />} />
+                  <XAxis dataKey={timeRange === '7 days' ? 'day' : 'name'} tick={<CustomTick />} interval={0} />
                   <Tooltip formatter={(value) => `${value} GB`} />
                   <Bar dataKey="usage" fill="#F6288F" radius={[4, 4, 0, 0]}>
                     <LabelList content={<CustomLabel />} />

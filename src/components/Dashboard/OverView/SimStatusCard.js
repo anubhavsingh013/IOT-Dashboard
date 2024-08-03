@@ -30,7 +30,7 @@ const SIMStatusCard = () => {
           fill="black"
           textAnchor="middle"
           dominantBaseline="central"
-          fontSize={isMobile ? 15 : 20}
+          fontSize={isMobile ? 20 : 25}
           fontWeight="bold"
         >
           {`${total}K`}
@@ -41,7 +41,7 @@ const SIMStatusCard = () => {
           fill="black"
           textAnchor="middle"
           dominantBaseline="central"
-          fontSize={isMobile ? 12 : 16}
+          fontSize={15}
           color='gray'
         >
           Total SIMs

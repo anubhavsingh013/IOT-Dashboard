@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
-import { AppBar, Toolbar, Typography, InputBase, Box, IconButton, Menu, MenuItem } from '@mui/material';
+import { AppBar, Toolbar, Typography, InputBase, Box, IconButton, Menu, MenuItem, useMediaQuery, useTheme } from '@mui/material';
 import { Search, AccountCircle, ArrowDropDown } from '@mui/icons-material';
 
+
 const Navbar = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
   const [anchorEl,setAnchorE1]=useState(null);
   const handleMenuOpen=(event)=>{
     setAnchorE1(event.currentTarget)
@@ -13,7 +17,7 @@ const Navbar = () => {
   const ismenuOpen=Boolean(anchorEl);
   return (
     <AppBar position="fixed" sx={{ backgroundColor: '#000', color: '#fff',boxShadow:0 }}>
-      <Toolbar sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', }}>
+      <Toolbar sx={{ display: 'flex', flexDirection: isMobile?'column':'row', justifyContent: 'space-between', }}>
         <Box display="flex" alignItems="flex-start" >
           <Box
             component="img"
@@ -56,13 +60,13 @@ const Navbar = () => {
               />
             </Box>
           </Box>
-          <Box display="flex" alignItems="center" sx={{ cursor: 'pointer' }} onClick={handleMenuOpen}>
+          <Box display="flex" alignItems="center" sx={{ cursor: 'pointer', }} onClick={handleMenuOpen}>
             <IconButton sx={{ color: 'inherit' }}>
               <AccountCircle />
             </IconButton>
-            <Typography variant="body2" component="div">
+            {!isMobile&&<Typography variant="body2" component="div">
               My account
-            </Typography>
+            </Typography>}
             <ArrowDropDown />
           </Box>
 
